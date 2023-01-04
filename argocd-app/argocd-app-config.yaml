@@ -15,17 +15,17 @@ spec:
     namespace: myfirstapp
 
 # configure that namespace myfirstapp is created automatically if not already there
-syncPolicy:
-  syncOptions:
-  - CreateNamespace=true
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
 
 # automatically sync changes in github repo
 # the automated attribute forces argocd to pull from the github repo every 3 mins
 
-  automated:
+    automated:
 # override any changes made manually to the cluster with the declarations in the github repo
 # make github repo single point of truth
-    selfHeal: true
+      selfHeal: true
 # if we delete a file, we configure argocd to do the same
-    prune: true
+      prune: true
 
