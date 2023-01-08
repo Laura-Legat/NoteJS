@@ -1,4 +1,13 @@
 apiVersion: k3d.io/v1alpha4
 kind: Simple
 metadata:
-  name: local-cluster
+# name of the k3d cluster
+  name: k3d-local-cluster
+# master node = 1
+servers: 1
+# worker nodes = 2
+agents: 2
+ports:
+  - port: 3000:80 # same as `--port '3000:80@loadbalancer'`
+    nodeFilters:
+      - loadbalancer
