@@ -9,12 +9,12 @@ spec:
     repoURL: https://github.com/Laura-Legat/cloudnative.git
     targetRevision: HEAD 
 #track myapps folder in github repo
-    path: myapps
+    path: notejs-src
   destination:
     server: https://kubernetes.default.svc
-    namespace: myfirstapp
+    namespace: notejs
 
-# configure that namespace myfirstapp is created automatically if not already there
+# configure that namespace notejs is created automatically if not already there
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
