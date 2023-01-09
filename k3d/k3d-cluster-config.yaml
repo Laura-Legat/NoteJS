@@ -8,6 +8,6 @@ servers: 1
 # worker nodes = 2
 agents: 2
 ports:
-  - port: 80:80 # same as `--port '3000:80@loadbalancer'`
+  - port: 80:80 # same as `--port '80:80@loadbalancer'`
     nodeFilters:
       - loadbalancer
