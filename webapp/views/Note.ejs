@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteJS</title>
+    <link href="static/css/style.css" rel="stylesheet">
+    <link rel="icon" href="static/images/logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="notejs-wrapper">
+        <div id="new-note-wrapper">
+            <img id="logo" src="static/images/logo.svg" alt="logo">
+            <h3>NoteJS - Your favorite note-taking app built with NodeJS!</h3>
+            <form action="" method="post">
+                <textarea id="note" rows="10" cols="50" name="note"
+                    placeholder="Note it down before you forget it..."></textarea><br>
+                <button type="submit">Save</button>
+            </form>
+        </div>
+        <div id="past-notes-wrapper">
+            <% if (data.length!=0){ %>
+                <h3>Notes:</h3>
+                <% } %>
+                    <% data.forEach(function(note) { %>
+                        <div class="note-container">
+                            <p class="timestamp">
+                                <%= note.timestamp %>
+                            </p>
+                            <p class="note">
+                                <%= note.note %>
+                            </p>
+                        </div>
+                        <% }); %>
+        </div>
+    </div>
+</body>
+
+</html>

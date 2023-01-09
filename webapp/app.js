@@ -1,9 +1,9 @@
-
 const express = require("express");
 const app = express();
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
-const ThoughtRoutes = require("./routes/ThoughtRouter");
+const NoteRoutes = require("./routes/NoteRouter");
+const path = require("path");
 
 // create a mongoose model from the above schema and export it
 
@@ -13,9 +13,10 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-// app.use(express.static(__dirname + '/public'));
 
-// mount router middleware functions to the /api route, they are callable from there
-app.use("/api", ThoughtRoutes);
+app.use('/static', express.static(path.join(__dirname, 'assets')));
+
+// mount router middleware functions to the / route, they are callable from there
+app.use("/", NoteRoutes);
 
 module.exports = app;

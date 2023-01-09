@@ -1,0 +1,63 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+#notejs-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#logo {
+    height: 130px;
+}
+
+#new-note-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    background-color: #4790fc;
+    color: white;
+    font-weight: bold;
+    border: 1px #4790fc;
+    border-radius: 3px;
+    height: 2rem;
+    width: 5rem;
+}
+
+button:hover {
+    background-color: #266cd4;
+    border-color: #266cd4;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#past-notes-wrapper {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.note-container {
+    border: 1px black solid;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.note-container:hover {
+    background-color: rgba(71, 144, 252, 0.2);
+}
+
+.note {
+    font-weight: bold;
+}
