@@ -1,6 +1,6 @@
 <img src="https://github.com/Laura-Legat/cloudnative/blob/main/webapp/assets/images/logo.svg" alt="logo" width="200"/>
 
-# NoteJS - JKU Cloudnative project
+# NoteJS - A note-taking app created with NoteJS - JKU Cloudnative project
 
 ## Pre-requisites (on Windows)
 
