@@ -12,8 +12,7 @@ spec:
     path: notejs-src
   destination:
     server: https://kubernetes.default.svc
-    namespace: notejs
-
+    
 # configure that namespace notejs is created automatically if not already there
   syncPolicy:
     syncOptions:
